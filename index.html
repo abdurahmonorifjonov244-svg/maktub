@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oyazimxon uchun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bordo:#5b0f23;--bordo2:#3a0a17;--black:#0d0809;--gold:#c9a45c;--gold2:#e6cf9a;--ivory:#f6efe3;--rose:#e8bfc6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at top,var(--bordo) 0%,var(--bordo2) 45%,var(--black) 100%) fixed;color:var(--ivory);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.7;min-height:100vh;overflow-x:hidden}
+.ar{font-family:'Amiri','Traditional Arabic','Noto Naskh Arabic',serif;direction:rtl;unicode-bidi:isolate}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:0}
+.p{position:absolute;color:var(--gold2);opacity:0;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(0);opacity:0}15%{opacity:.5}100%{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+section{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:72px 22px}
+h2{font-weight:600;font-size:1.7rem;text-align:center;color:var(--gold2);margin-bottom:10px}
+.line{height:1px;width:140px;margin:0 auto 34px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.arab-orn{display:block;text-align:center;color:var(--gold);letter-spacing:.6em;font-size:1rem;margin-bottom:8px}
+/* intro */
+#intro{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px}
+#intro .salam{font-size:2.3rem;color:var(--gold2);line-height:1.5}
+#intro p.lead{max-width:30em;font-style:italic;color:var(--rose)}
+.env{position:relative;width:min(300px,78vw);height:200px;cursor:pointer;border:0;background:none;perspective:900px;margin-top:10px;animation:breath 4s ease-in-out infinite}
+@keyframes breath{50%{transform:translateY(-6px)}}
+.env .body{position:absolute;inset:0;background:linear-gradient(160deg,#f1e4cf,#e2cfae);border-radius:6px;box-shadow:0 18px 40px #000a;border:1px solid var(--gold)}
+.env .body:before,.env .body:after{content:"";position:absolute;bottom:0;width:50%;height:100%;background:#ead9bb}
+.env .body:before{left:0;clip-path:polygon(0 0,100% 100%,0 100%)}
+.env .body:after{right:0;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.env .flap{position:absolute;left:0;top:0;width:100%;height:55%;background:linear-gradient(#e9d6b3,#d9c29a);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease;z-index:3}
+.env .seal{position:absolute;left:50%;top:48%;width:58px;height:58px;margin:-29px 0 0 -29px;z-index:4;transition:opacity .5s,transform .5s;filter:drop-shadow(0 3px 6px #0008)}
+.env .paper{position:absolute;left:8%;right:8%;top:6%;height:84%;background:var(--ivory);border-radius:3px;z-index:1;transition:transform 1s .5s ease}
+.env.open{animation:none}
+.env.open .flap{transform:rotateX(180deg);z-index:0}
+.env.open .seal{opacity:0;transform:scale(1.8)}
+.env.open .paper{transform:translateY(-70px)}
+.hint{font-size:.95rem;color:var(--gold);opacity:.8}
+#rest{display:none}
+#rest.show{display:block;animation:fade 1.4s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+/* letter */
+.letter{background:linear-gradient(#f8f1e5,#efe3cd);color:#3a1d22;border:1px solid var(--gold);border-radius:4px;padding:38px 28px;box-shadow:0 20px 50px #000a,inset 0 0 0 6px #f8f1e5,inset 0 0 0 7px #c9a45c88}
+.letter p{margin-bottom:1.1em}
+.letter .to{font-weight:600;font-size:1.3rem}
+.big{display:block;text-align:center;font-size:clamp(1.7rem,6.5vw,2.4rem);font-style:italic;color:var(--bordo);margin:1.2em 0;opacity:0;transform:scale(.96);transition:opacity 2s,transform 2s}
+.big.in{opacity:1;transform:none}
+.big:before,.big:after{content:"❦";display:block;color:var(--gold);font-size:1rem;font-style:normal}
+/* phrases / duas */
+.card{border:1px solid #c9a45c66;background:#0d080988;border-radius:10px;padding:18px 20px;margin-bottom:16px;text-align:center}
+.card .ar{font-size:1.9rem;line-height:1.9;color:var(--gold2)}
+.card .uz{color:var(--ivory);opacity:.9}
+.card .src{display:block;margin-top:6px;font-size:.9rem;color:var(--rose)}
+h3{font-size:1.2rem;color:var(--gold);text-align:center;margin:30px 0 14px;font-weight:600}
+.note{font-size:.9rem;text-align:center;color:var(--rose);opacity:.85;margin-top:10px}
+/* languages */
+.arabic-feature{border:2px double var(--gold);background:linear-gradient(160deg,#5b0f2399,#0d080999);padding:26px 18px;margin-bottom:22px;border-radius:14px;text-align:center;position:relative}
+.arabic-feature .ar{font-size:3rem;color:var(--gold2);line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.lang{border:1px solid #c9a45c44;border-radius:8px;padding:12px 14px;background:#0d080966}
+.lang b{display:block;font-size:.85rem;color:var(--gold);font-weight:400}
+.lang .t{font-size:1.35rem;color:var(--ivory);line-height:1.4}
+.lang i{display:block;font-size:.9rem;color:var(--rose)}
+.lang small{font-size:.85rem;opacity:.7}
+/* final */
+.final .letter{margin-top:26px}
+.sign{text-align:center;margin-top:20px}
+.sign .ar{font-size:1.6rem;color:var(--bordo)}
+footer{text-align:center;padding:30px;color:var(--gold);opacity:.7;font-size:.9rem;position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+
+<section id="intro">
+  <span class="arab-orn" aria-hidden="true">✦ ❖ ✦</span>
+  <div class="salam ar" lang="ar">السَّلَامُ عَلَيْكِ يَا عَزِيزَتِي</div>
+  <p class="lead">Oyazimxon, bu maktub sizga qalbimning eng samimiy tuyg‘ularidan yozildi...</p>
+  <button class="env" id="env" aria-label="Maktubni ochish">
+    <div class="body"></div><div class="paper"></div>
+    <div class="flap"></div>
+    <svg class="seal" viewBox="0 0 60 60"><defs><radialGradient id="g" cx="40%" cy="35%"><stop offset="0" stop-color="#b3213f"/><stop offset="1" stop-color="#5b0f23"/></radialGradient></defs><circle cx="30" cy="30" r="28" fill="url(#g)" stroke="#c9a45c" stroke-width="2"/><path d="M30 44 C12 31 16 17 25 17 C28 17 30 20 30 22 C30 20 32 17 35 17 C44 17 48 31 30 44Z" fill="#e6cf9a"/></svg>
+  </button>
+  <span class="hint">Maktubni ochish uchun bosing</span>
+</section>
+
+<div id="rest">
+<section id="letter">
+  <h2>Maktub</h2><div class="line"></div>
+  <div class="letter">
+    <p class="to">Hurmatli Oyazimxon,</p>
+    <p>Ba’zi insonlar hayotimizga shunchaki kelmaydi. Ular o‘zlari bilan sokin bir yorug‘lik olib keladi, biz esa buni ancha vaqt o‘tib anglaymiz.</p>
+    <p>Men ko‘p narsani ichimda saqlaydigan odamman. Shuning uchun ba’zi tuyg‘ularni so‘z bilan to‘liq aytib berish menga qiyin. Balandparvoz gaplar o‘rniga, oddiy va chin so‘zlarni afzal ko‘raman.</p>
+    <p>Siz men uchun qadrli insonsiz. Sizga bo‘lgan hislarim samimiy. Men sizning baxtli, xotirjam va doimo yaxshilikda bo‘lishingizni istayman.</p>
+    <span class="big" id="big">Men sizni sevaman, Oyazimxon!</span>
+    <p>Men kelajakni bilmayman. Shu sababli hech qanday va’da bermayman. Faqat yaxshi niyatlarimni Allohga topshiraman, U nimani xayrli bilsa, shuni nasib etsin.</p>
+  </div>
+</section>
+
+<section id="phrases">
+  <h2>Arabcha so‘zlar</h2><div class="line"></div>
+  <div class="card"><div class="ar" lang="ar">أُحِبُّكِ</div><div class="uz">Men sizni sevaman.</div></div>
+  <div class="card"><div class="ar" lang="ar">أَشْتَاقُ إِلَيْكِ</div><div class="uz">Sizni sog‘inaman.</div></div>
+  <div class="card"><div class="ar" lang="ar">أَنْتِ عَزِيزَةٌ عَلَى قَلْبِي</div><div class="uz">Siz qalbim uchun qadrlisiz.</div></div>
+  <div class="card"><div class="ar" lang="ar">أَتَمَنَّى لَكِ كُلَّ خَيْرٍ</div><div class="uz">Sizga barcha yaxshiliklarni tilayman.</div></div>
+  <div class="card"><div class="ar" lang="ar">حَفِظَكِ اللهُ وَرَعَاكِ</div><div class="uz">Alloh sizni asrasin va panohida saqlasin.</div></div>
+</section>
+
+<section id="duas">
+  <h2>Siz uchun duolarim</h2><div class="line"></div>
+  <h3>Shaxsiy duolarim</h3>
+  <div class="card"><div class="ar" lang="ar">اللَّهُمَّ احْفَظْهَا وَارْزُقْهَا السَّعَادَةَ وَالطُّمَأْنِينَةَ</div><div class="uz">Allohim, uni asra, unga baxt va xotirjamlik ato et.</div></div>
+  <div class="card"><div class="ar" lang="ar">اللَّهُمَّ اخْتَرْ لَنَا الْخَيْرَ وَارْضِنَا بِقَضَائِكَ</div><div class="uz">Allohim, biz uchun xayrlisini tanla va taqdiringga rozi qil.</div></div>
+  <div class="card"><div class="ar" lang="ar">اللَّهُمَّ إِنْ كَانَ فِي اجْتِمَاعِنَا خَيْرٌ فَاجْمَعْ بَيْنَنَا بِالْحَلَالِ</div><div class="uz">Allohim, agar birga bo‘lishimizda xayr bo‘lsa, bizni halol yo‘l bilan birlashtir.</div></div>
+  <p class="note">Bular mening shaxsiy duolarim; hadis yoki Qur’on oyati emas.</p>
+  <h3>Qur’on duolari</h3>
+  <div class="card"><div class="ar" lang="ar">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</div><span class="src">Furqon surasi, 74-oyat</span></div>
+  <div class="card"><div class="ar" lang="ar">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div><span class="src">Baqarah surasi, 201-oyat</span></div>
+</section>
+
+<section id="langs">
+  <h2>Ko‘p tillarda: “Men sizni sevaman”</h2><div class="line"></div>
+  <div class="arabic-feature"><span class="arab-orn" aria-hidden="true">✦ ❖ ✦</span><b style="color:var(--gold);font-weight:400">Arab tili</b>
+    <div class="ar" lang="ar">أُحِبُّكِ</div><i style="color:var(--rose)">uhibbuki</i><br><small>Men sizni sevaman.</small></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="final" class="final">
+  <h2>Yakuniy so‘z</h2><div class="line"></div>
+  <div class="card"><div class="ar" lang="ar">اللَّهُمَّ اكْتُبْ لَنَا الْخَيْرَ حَيْثُ كَانَ</div><div class="uz">Allohim, biz uchun xayr qayerda bo‘lsa, o‘shani nasib et.</div></div>
+  <div class="letter">
+    <p>Oyazimxon, men kelajakni oldindan bilmayman. Ammo sizga bo‘lgan yaxshi niyatlarimni Allohga topshiraman. Agar biz uchun birga bo‘lish xayrli bo‘lsa, Alloh uni eng go‘zal va halol yo‘l bilan nasib etsin. Sizga doimo yaxshilik, xotirjamlik va baxt tilayman.</p>
+    <div class="sign"><div class="ar" lang="ar">بِكُلِّ صِدْقٍ وَاحْتِرَامٍ</div><i>Butun samimiyat va hurmat bilan.</i></div>
+  </div>
+</section>
+<footer>Oyazimxon uchun</footer>
+</div>
+
+<script>
+// floating stars and hearts
+(function(){var s=document.getElementById('sky'),c=['✦','♥','✧','☽'];
+for(var i=0;i<22;i++){var e=document.createElement('span');e.className='p';e.textContent=c[i%4];
+e.style.left=Math.random()*100+'%';e.style.top=(60+Math.random()*50)+'%';e.style.fontSize=(8+Math.random()*10)+'px';
+e.style.animationDuration=(18+Math.random()*20)+'s';e.style.animationDelay=(-Math.random()*30)+'s';s.appendChild(e);}})();
+
+// envelope
+var env=document.getElementById('env'),rest=document.getElementById('rest');
+env.addEventListener('click',function(){
+  if(env.classList.contains('open'))return;
+  env.classList.add('open');
+  setTimeout(function(){rest.classList.add('show');document.getElementById('letter').scrollIntoView({behavior:'smooth'});},1500);
+});
+new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}})},{threshold:.6}).observe(document.getElementById('big'));
+
+// languages: [til, yozuv, talaffuz, rtl?]
+var L=[["Ingliz","I love you","ay lav yu"],["Turk","Seni seviyorum","seni sevi-yorum"],["Fors","دوستت دارم","dustat dâram",1],["Urdu","مجھے تم سے محبت ہے","mujhe tum se muhabbat hai",1],["Rus","Я тебя люблю","ya tebya lyublyu"],["Fransuz","Je t’aime","j’te em"],["Nemis","Ich liebe dich","ix libe dix"],["Ispan","Te quiero","te kyero"],["Italyan","Ti amo","ti amo"],["Portugal","Eu te amo","eu te amu"],["Xitoy","我爱你","vǒ ài nǐ"],["Yapon","愛してる","aishiteru"],["Koreys","사랑해요","saranghaeyo"],["Hind","मैं तुमसे प्यार करता हूँ","main tumse pyar karta hun"],["Bengal","আমি তোমাকে ভালোবাসি","ami tomake bhalobashi"],["Tojik","Ман туро дўст медорам","man turo dūst medoram"],["Qozoq","Мен сені сүйемін","men seni süyemin"],["Qirg‘iz","Мен сени сүйөм","men seni süyöm"],["Ozarbayjon","Mən səni sevirəm","men seni sevirem"],["Turkman","Men seni söýýärin","men seni søyyarin"],["Tatar","Мин сине яратам","min sine yaratam"],["Ukrain","Я тебе кохаю","ya tebe kokhayu"],["Polyak","Kocham cię","kokham chye"],["Yunon","Σε αγαπώ","se agapo"],["Ivrit","אני אוהב אותך","ani ohev otakh",1],["Indoneziya","Aku cinta kamu","aku chinta kamu"],["Tailand","ฉันรักเธอ","chan rak thoe"],["Vetnam","Anh yêu em","ang iu em"],["Suaxili","Nakupenda","nakupenda"],["Golland","Ik hou van je","ik hau fan ye"],["Shved","Jag älskar dig","yog elskar dey"],["Fin","Minä rakastan sinua","minya rakastan sinua"],["Chex","Miluji tě","milyuyi tye"],["Alban","Të dua","te dua"],["Rumin","Te iubesc","te iubesk"]];
+var g=document.getElementById('grid');
+L.forEach(function(x){var d=document.createElement('div');d.className='lang';
+d.innerHTML='<b>'+x[0]+'</b><div class="t"'+(x[3]?' dir="rtl"':'')+'></div><i></i><small>Men sizni sevaman.</small>';
+d.querySelector('.t').textContent=x[1];d.querySelector('i').textContent=x[2];g.appendChild(d);});
+
+</script>
+</body>
+  </html>
